@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/Happy-Mistake.mp3" controls autoplay></audio> <!--É compatíel com Mp3, Wav e Ogg-->
+
+    <audio preload="metadata" controls autoplay>
+        <source src="midia/We Bubbles.mp3" type="audio/mpeg">
+        <source src="midia/We Bubbles.ogg" type="audio/ogg">
+        <source src="midia/We Bubbles.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir audio. <a href="midia/We Bubbles.mp3">CLique aqui para baixar o arquivo MP3.</a></p> <!--Ter vários formatos disponíveis é indicado porque pode acontecer de haver descompatibilidade com o navegador do usuário e não conseguir reproduzir o arquivo pelo navegador. O script faz a tentativa na ordem de cima para baixo. É indicado, também ter a disponibilidade de fazer o download, caso nenhuma das três opções tiverem êxito.-->
+    </audio>    
+</body>
+</html>

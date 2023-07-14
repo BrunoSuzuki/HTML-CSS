@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+
+        /* SELETORES PERSONALIZADOS
+            - # = id
+            - . = class
+            - : = pseudo-class
+            - :: = pseudo-element
+            - > = children (herança)
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited { /* - visited: essa pseusdo-classe representa a configuração de links visitadas, portando estará fixadamente com a cor especificada (darkblue).*/
+            color: darkblue;
+        }
+        a:hover { /* - hover: como mencionado anteriormente, essa pseudo-classe representa a mudança da cor para (preta)uma vez que o mouse passe sobre o link em modo underline.*/
+            color: black;
+            text-decoration: underline;
+        }
+        a:active { /* - active: é representado como uma função de seleção de link. Isso acontece quando, ao clicar no link, a cor (amarela) é exibida.*/
+            color: yellow;
+        
+        }
+
+        .especial {
+            background-color: darkred;
+        }
+
+        .especial::before {
+
+            content: '⇒' ;
+        }
+
+        .especial::after { /* depois de todos os link, é exibido uma palavra 'link' para indicar o link*/
+            content: '⇐';
+            text-decoration: none;
+            font-weight: normal;
+            color: red;
+        }
+
+        /* Pseudoelementos tem como mexer no conteúdo periférico do elemento.  */
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank" rel="external">Repositório Github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external" class="especial">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank" target="_blank" rel="external" class="especial">Site do CursoemVideo</a></li>
+    </ul>
+    
+</body>
+</html>
