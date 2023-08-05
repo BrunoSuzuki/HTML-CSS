@@ -6,16 +6,28 @@
     <title>Document</title>
     <style>
         body {
+            /*height: 100vh;
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
-            background-position: center top;
+            background-position: center center;
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: cover;
+            background-attachment: fixed;*/
+
+            /*Shorthand - backgorund attachment
+            vai ser nessa ordem: color > image > position > repeat > [size]
+           */
+
+           background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed;
+           background-size: cover; /*no manual está constado que o size pode ser incluido na shorthand, porem ao executar no browser o size não executa. é prefeŕivel que parametrize fora da shorthand*/
         }
+           
+
+           
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 700px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -30,6 +42,9 @@
     <main>
         <h1>Teste de Imagem de Fundo</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus libero vero eaque et, cum iste facere reprehenderit repellat. Dolorem asperiores natus porro ducimus quasi laborum expedita repudiandae enim soluta! Amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui nulla aut fugiat, vel molestiae nobis obcaecati corrupti, inventore dolorem voluptatum dolor eaque, sit odit. Ullam nemo sint dolorem debitis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, nemo velit consequatur excepturi unde animi a corporis distinctio iste reiciendis aperiam consequuntur cum, molestias incidunt dolore quam minus exercitationem possimus?</p>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus libero vero eaque et, cum iste facere reprehenderit repellat. Dolorem asperiores natus porro ducimus quasi laborum expedita repudiandae enim soluta! Amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui nulla aut fugiat, vel molestiae nobis obcaecati corrupti, inventore dolorem voluptatum dolor eaque, sit odit. Ullam nemo sint dolorem debitis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, nemo velit consequatur excepturi unde animi a corporis distinctio iste reiciendis aperiam consequuntur cum, molestias incidunt dolore quam minus exercitationem possimus?</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus libero vero eaque et, cum iste facere reprehenderit repellat. Dolorem asperiores natus porro ducimus quasi laborum expedita repudiandae enim soluta! Amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui nulla aut fugiat, vel molestiae nobis obcaecati corrupti, inventore dolorem voluptatum dolor eaque, sit odit. Ullam nemo sint dolorem debitis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, nemo velit consequatur excepturi unde animi a corporis distinctio iste reiciendis aperiam consequuntur cum, molestias incidunt dolore quam minus exercitationem possimus?</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus libero vero eaque et, cum iste facere reprehenderit repellat. Dolorem asperiores natus porro ducimus quasi laborum expedita repudiandae enim soluta! Amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui nulla aut fugiat, vel molestiae nobis obcaecati corrupti, inventore dolorem voluptatum dolor eaque, sit odit. Ullam nemo sint dolorem debitis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, nemo velit consequatur excepturi unde animi a corporis distinctio iste reiciendis aperiam consequuntur cum, molestias incidunt dolore quam minus exercitationem possimus?</p>
     </main>
     
     
