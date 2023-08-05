@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        
+        <p><label for="inome">Nome:</label> <!--o for siginifica "para quem?" e deve colocar o id do input para vincular o label com o input-->
+            <input type="text" name="nome" id="inome"></p>
+        
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        
+        <p><input type="submit" value="Enviar"></p>
+        
+    </form>
+    
+</body>
+</html>
+
+<!-- input > name: mais util para identificar no HTML E PHP
+   input > id: mais util para identificar Javascript E LABEL-->
+
+<!-- Existem dois tipos de método para envio de formulário:
+    GET: 'o método que exibe as informações na URL. Caso não inserir o method na tag form, mesmo assim o GET é ativado por padrão'
+    POST: O post, por sua vez, Não exibe as informações de cadastro na URL. Elé útil para caso tenha que ter um iten no formulário que contenha dados sensíveis ex: fotos, senhas e formulários que tenha mais de 3000bytes-->
