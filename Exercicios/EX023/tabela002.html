@@ -13,18 +13,36 @@
         table {
             width: 500px;
             border-collapse: collapse;
-            
-
+            position: relative;
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
+            
         }
 
-        thead {
-            background-color: grey;
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+
+        }
+
+        thead, tfoot {
+            background-color: #383838;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky; /*O uso é comum em cabeçalhos de tabelas, barras de navegação ou qualquer elemento que queira permanecer visível na tela durante a rolagem da página mas também não deve ocupar espaço fixo o tempo todo. No caso ele só vai ser visível quando a tabela sumir da página ao uso da barra de rolagem.*/
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
         }
 
         td.num {
@@ -46,10 +64,11 @@
     -->
     
     <table>
+        <caption>População das Unidades Federativas</caption> <!--tag para legenda da tabela-->
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th> <!--aqui é scope="col" por indicar que o título refere-se a dados que estão nas colunas abaixo-->
+                <th scope="col" style="width: 90px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -164,11 +183,13 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!--aqui é scope="row" por indicar que o título refere-se a um dado de uma linha-->
                 <td class="num"><strong>206 879 287</strong></td>
             </tr>
         </tfoot>
     </table>
+
+    <!--Inserir atributos de scope="col/row" apesar de não afetar a estrutura da tabela, é muito importante para a facilitação de busca de um buscador como o google-->
     
 </body>
 </html>
