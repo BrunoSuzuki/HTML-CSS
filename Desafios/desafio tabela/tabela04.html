@@ -39,15 +39,24 @@
             background-color: grey;
             color: white;
 
-        }
+        }       
 
-        td#ponto {
-            text-align: center;
-        }        
+        col.centro {     
+            background-color: yellow;      
+            text-align: center; /*era para alinhar os conteudos da tabela ao centro mas não ocorre*/
+        }
+                
     </style>
 </head>
 <body>
     <table>
+        <colgroup>
+            <col>
+            <col>
+            <col class="centro" span="3">
+        
+
+        </colgroup>
         <thead>
             <tr>
                 <th scope="col" rowspan="2">Área</th>
@@ -64,48 +73,48 @@
             <tr>
                 <th scope="rowgroup" rowspan="4">Exatas</th>
                 <td>Matemática</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>                
+                <td >0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>                
             </tr>
             <tr>
                 <td>Física</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>                
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>                
             </tr>
             <tr>
                 <td>Química</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>             
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>             
             </tr>
             <tr>
                 <td>Biologia</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>                
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>                
             </tr>
             <tr>
                 <th id="body" scope="row" colspan="4">Média de Exatas</th>               
-                <th id="mediath">0.0</th>
+                <th id="mediath"><strong>0.0</strong></th>
             </tr>
             <tr>
                 <th scope="rowgroup" rowspan="2">Humanas</th>
                 <td>História</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
             </tr>
             <tr>                
                 <td>Geografia</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>
-                <td id="ponto">0.0</td>                
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>                
             </tr>
             <tr>
                 <th id="body" scope="row" colspan="4">Média de Humanas</th>
-                <th id="mediath">0.0</th>                
+                <th id="mediath"><strong>0.0</strong></th>                
             </tr>           
         </tbody>
     </table>
